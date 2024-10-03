@@ -1,12 +1,25 @@
-import { Divz } from "Divz";
-import { useEffect, useRef, useState } from "react";
+import { Divz } from "divz";
+import { useEffect, useState } from "react";
 import { FaLinkedin, FaGithub } from "react-icons/fa"; // Importing FontAwesome icons
 import "./App.css";
-import profile from "./assets/profile.png";
-import krishna from "./assets/krishna.jpg";
-import bgMusic from "./assets/bgMusic.mp3";
+import { teamList } from "./constant/Teams";
+
+interface Team {
+    name: string;
+    title: string;
+    image: string;
+    social: {
+        linked: string; // Ensure this matches what you have in teamList
+        github: string;
+    };
+}
 
 function App() {
+    const [teams, setTeams] = useState<Team[]>(teamList); // Use Team[] instead of Team[] | null
+
+    useEffect(() => {
+        setTeams(teamList);
+    }, []);
     return (
         <div className={`app`}>
             <div className="app-header">
@@ -14,52 +27,18 @@ function App() {
                 <small>You can Follow us on our socials</small>
             </div>
 
-            {/* <audio autoPlay>
-                <source src={bgMusic} type="audio/mpeg" />
-            </audio> */}
-
-            <Demo4 />
+            <Demo4 teams={teams} />
         </div>
     );
 }
 
-const demo3Assets = [
-    {
-        image: krishna,
-        name: "Akash Banik",
-        title: "Developer",
-        social: {
-            linkedin: "https://linkedin.com/in/akash-banik",
-            github: "https://github.com/akash-banik",
-        },
-    },
-    {
-        image: krishna,
-        name: "Akash Banik",
-        title: "Developer",
-        social: {
-            linkedin: "https://linkedin.com/in/akash-banik",
-            github: "https://github.com/akash-banik",
-        },
-    },
-    {
-        image: krishna,
-        name: "Gyan Deep",
-        title: "Developer",
-        social: {
-            linkedin: "https://linkedin.com/in/gyan-deep",
-            github: "https://github.com/gyan-deep",
-        },
-    },
-];
-
-function Demo4() {
+// Update the Demo4 component to receive teams correctly
+function Demo4({ teams }: { teams: Team[] }) {
     return (
         <Divz className="demo4" isAutoPlayLooped={true} autoPlayDuration={2000}>
-            {demo3Assets.map((member, index) => (
+            {teams.map((member, index) => (
                 <figure key={index}>
                     <img src={member.image} alt={`${member.name} profile`} />
-
                     <figcaption>
                         <div>{(index + 1).toString().padStart(2, "0")}</div>
                         <div>{member.name}</div>
@@ -68,7 +47,7 @@ function Demo4() {
                         {/* Social Icons */}
                         <div className="social-icons">
                             <a
-                                href={member.social.linkedin}
+                                href={member.social.linked}
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >

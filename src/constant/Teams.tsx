@@ -1,5 +1,5 @@
 import { akash, krishna } from "./Image.tsx";
-const teams = [
+export const teamList = [
     {
         name: "Akash Banik",
         title: "Developer",
