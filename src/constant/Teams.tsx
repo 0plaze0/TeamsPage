@@ -4,14 +4,14 @@ export const teamList = [
         name: "Krishan Sharma",
         title: "Developer",
         image: krishna,
-        social: "",
+        social: "https://www.linkedin.com/in/krishna-sharma-a502aa234/",
     },
 
     {
         name: "Abhishek Kashyap",
         title: "Developer",
         image: abhishek,
-        social: "",
+        social: "https://www.linkedin.com/in/abhishek30125/",
     },
 
     {
@@ -24,12 +24,12 @@ export const teamList = [
         name: "Subhrajit Talukdar",
         title: "Developer",
         image: subrajit,
-        social: "",
+        social: "https://www.linkedin.com/in/subhrajittalukdar/",
     },
     {
         name: "Akash Banik",
         title: "Developer",
         image: akash,
-        social: "",
+        social: "https://www.linkedin.com/in/akash-banik-2b8093253/",
     },
 ];

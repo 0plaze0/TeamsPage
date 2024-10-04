@@ -1,6 +1,7 @@
 import { Divz } from "Divz";
 import "./App.css";
 import { teamList } from "./constant/Teams";
+import { FaGlobe } from "react-icons/fa";
 
 function App() {
     return (
@@ -37,6 +38,9 @@ function Demo4() {
                             <div>{(index + 1).toString().padStart(2, "0")}</div>
                             <div>{member.name}</div>
                             <div>{member.title}</div>
+                            <a href={member.social}>
+                                <FaGlobe />
+                            </a>
                         </figcaption>
                     </figure>
                 ))}
