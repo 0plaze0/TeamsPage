@@ -18,7 +18,7 @@ export const teamList = [
         name: "GDB",
         title: "Designer",
         image: gyandeep,
-        social: "https://www.linkedin.com/in/gyandeep-basumatary-591800249/",
+        social: "https://www.instagram.com/gya_n_deep_/profilecard/?igsh=MWEyM3JuaTY0Nm1rNQ==",
     },
     {
         name: "Subhrajit Talukdar",
