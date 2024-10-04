@@ -1,4 +1,4 @@
-import { Divz } from "Divz";
+import { Divz } from "divz";
 import "./App.css";
 import { teamList } from "./constant/Teams";
 import { FaGlobe } from "react-icons/fa";
