@@ -1,48 +1,35 @@
-import { akash, krishna } from "./Image.tsx";
+import { akash, krishna, gyandeep, abhishek, subrajit } from "./Image.tsx";
 export const teamList = [
+    {
+        name: "Krishan Sharma",
+        title: "Developer",
+        image: krishna,
+        social: "",
+    },
+
+    {
+        name: "Abhishek Kashyap",
+        title: "Developer",
+        image: abhishek,
+        social: "",
+    },
+
+    {
+        name: "GDB",
+        title: "Designer",
+        image: gyandeep,
+        social: "",
+    },
+    {
+        name: "Subhrajit Talukdar",
+        title: "Developer",
+        image: subrajit,
+        social: "",
+    },
     {
         name: "Akash Banik",
         title: "Developer",
         image: akash,
-        social: {
-            linked: "",
-            github: "",
-        },
-    },
-    {
-        name: "Krishan Sharma",
-        title: "Developer",
-        image: krishna,
-        social: {
-            linked: "",
-            github: "",
-        },
-    },
-    {
-        name: "GDB",
-        title: "Designer",
-        image: krishna,
-        social: {
-            linked: "",
-            github: "",
-        },
-    },
-    {
-        name: "Krishan Sharma",
-        title: "Developer",
-        image: krishna,
-        social: {
-            linked: "",
-            github: "",
-        },
-    },
-    {
-        name: "Krishan Sharma",
-        title: "Developer",
-        image: krishna,
-        social: {
-            linked: "",
-            github: "",
-        },
+        social: "",
     },
 ];
